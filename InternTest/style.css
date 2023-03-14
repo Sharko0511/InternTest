@@ -10,7 +10,7 @@
 }
 .sidenav {
   height: 100%;
-  width: 10%;
+  width: 14%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -34,7 +34,7 @@
   background: #aaaaaa;
 }
 .main {
-  margin-left: 10%; /* Same as the width of the sidenav */
+  margin-left: 14%; /* Same as the width of the sidenav */
   padding: 0px 10px;
 }
 @media screen and (max-height: 450px) {
@@ -79,7 +79,8 @@
 
 @media only screen and (max-width: 900px) {
   /* For tablets: */
-  .sidenav {
+  .sidenav.collapse {
+    width: 200px;
     display: none;
   }
   .content-group {
@@ -88,4 +89,28 @@
   .main {
     margin-left: 0;
   }
+}
+@media (min-width: 900px) {
+  .hide-large {
+    display: none !important;
+  }
+  .sidenav.collapse {
+    display: block !important;
+  }
+}
+.close-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: 14px;
+  color: #aaaaaa;
+  background: none;
+  font-size: 30px;
+  border: none;
+}
+.close-btn:hover {
+  color: #f1f1f1;
+  background: #aaaaaa;
+}
+.open-btn {
+  font-size: 18px;
 }

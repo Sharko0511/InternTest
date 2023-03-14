@@ -19,7 +19,8 @@
   </head>
   <body>
     <!-- Sidebar -->
-    <div class="sidenav">
+    <div class="sidenav collapse" id="mySidebar">
+      <button class="close-btn hide-large" onclick="w3_close()">&times;</button>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#news">News</a>
@@ -29,8 +30,7 @@
     <!-- Page Content -->
     <div class="main">
       <div>
-        <link href="./content.css" rel="stylesheet" />
-
+        <button class="open-btn hide-large" onclick="w3_open()">&#9776;</button>
         <div class="container">
           <div class="content-logo">
             <img
@@ -127,5 +127,14 @@
         </div>
       </div>
     </div>
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+      </script>
   </body>
 </html>
