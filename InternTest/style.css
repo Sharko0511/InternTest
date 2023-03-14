@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.sidenav {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #aaaaaa;
+  display: block;
+  border-bottom: 0.5px solid #bbbbbb;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  background: #aaaaaa;
+}
+.main {
+  margin-left: 10%; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.content-logo {
+  text-align: center;
+}
+.content-slogan {
+  text-align: center;
+  margin: 20px;
+  background: #efefef;
+  padding: 10px;
+}
+.content-slogan-text {
+  margin-left: 200;
+}
+.content-group {
+  display: flex;
+}
+.content-text {
+  display: flex;
+}
+.content-item {
+  padding: 12px;
+}
+#footer {
+  margin: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+  /* For tablets: */
+  .sidenav {
+    display: none;
+  }
+  .content-group {
+    flex-wrap: wrap;
+  }
+  .main {
+    margin-left: 0;
+  }
+}
